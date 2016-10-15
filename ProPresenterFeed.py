@@ -12,17 +12,11 @@ def downloadImage(url, outName):
 	del imageRequest
 	return outName
 
-imageDirectory = '/Users/kevindoveton/Desktop/instaPro5/cache/' # include leading and trailing slashes (/)
-fileName = '../feed.pro5'
-
-
-fileName = imageDirectory+fileName
-accessToken = "344498719.d00b769.b32fd02b60ae4882b8f0d686f8cd20e2"
-accessTokenPublic = '344498719.d00b769.b32fd02b60ae4882b8f0d686f8cd20e2'
-clientSecret = "b4cb2e71cdcd4164895eadf8e2231954"
-clientId = "d00b769d8f054964b7a2b9cfca3ded59"
+import config
 
 baseUrl = 'https://api.instagram.com/v1/'
+
+fileName = imageDirectory+fileName
 
 tag = sys.argv[1]
 fullUrl= baseUrl+'tags/'+tag+'/media/recent/?&access_token='+accessToken
